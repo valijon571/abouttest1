@@ -1,61 +1,63 @@
-import React from "react";
+// import React from "react";
+import React, { useRef, useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
 import { AboutStyle } from "../AboutStyle";
-// import Slider from "react-slick";
-// import { Swiper, SwiperSlide } from "swiper/react";
-// import { Pagination, Navigation } from "swiper/modules";
-// import "slick-carousel/slick/slick.css";
-// import "slick-carousel/slick/slick-theme.css";
-// import "swiper/css";
-// import "swiper/css/pagination";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+// import "./styles.css";
+import { Pagination, Navigation } from "swiper/modules";
 
 const Banner = () => {
-  // let settings = {
-  //   dots: true,
-  //   centerMode: true,
-  //   speed: 500,
-  //   slidesToShow: 1,
-  //   slidesToScroll: 1,
-  //   spaceBetween: 30,
-  //   autoplay: true,
-  //   autoplaySpeed: 5000,
-  // };
   return (
     <>
       <AboutStyle>
-        {/* <div className="container">
-        <div class="banner">
-          <h2>Banner</h2>
-          <div className="carusel">
-            <Slider {...settings}>
-              <div>
-                <img
-                  src="../img/rectangle4.png"
-                  // alt="Los Angeles"
-                  // class="d-block"
-                  // style="width:100%"
-                />
-              </div>
-              <div>
-                <img
-                  src="https://nasvyazi.uz/api//storage/images/October2023/HdyZMPZZ47v2j57cxkNR.jpg"
-                  // alt="Los Angeles"
-                  // class="d-block"
-                  // style="width:100%"
-                />
-              </div>
-              <div>
-                <img
-                  src="https://nasvyazi.uz/api//storage/images/October2023/fSND1dM97XfdGUs7adoU.jpg"
-                  // alt="Los Angeles"
-                  // class="d-block"
-                  // style="width:100%"
-                />
-              </div>
-            </Slider>
-          </div>
+        <div className="container">
+          <h5>Banner</h5>
+          <Swiper
+            slidesPerView={3}
+            spaceBetween={15}
+            loop={true}
+            pagination={{
+              clickable: true,
+            }}
+            navigation={true}
+            modules={[Pagination, Navigation]}
+            className="mySwiper"
+          >
+            <SwiperSlide>
+              <img
+                src="https://btest.gazon-tashkent.uz/media/banner/image_2023-11-02_15-26-32.png"
+                alt=""
+                loading="lazy"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img
+                src="https://btest.gazon-tashkent.uz/media/banner/photo_2023-10-04_13-37-39.jpg"
+                alt=""
+                loading="lazy"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img
+                src="https://btest.gazon-tashkent.uz/media/banner/photo_2023-11-03_20-45-54.jpg"
+                alt=""
+                loading="lazy"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img
+                src="https://btest.gazon-tashkent.uz/media/banner/LOADING_v1_03.jpg"
+                alt=""
+                loading="lazy"
+              />
+            </SwiperSlide>
+          </Swiper>
         </div>
-        </div> */}
-        <div class="swiper" lazy="true">
+
+        {/* ====================================== */}
+        {/* <div class="swiper" lazy="true">
           <div class="swiper-wrapper">
             <div
               class="swiper-slide"
@@ -120,7 +122,7 @@ const Banner = () => {
           </div>
           <div class="swiper-button-prev"></div>
           <div class="swiper-button-next"></div>
-        </div>
+        </div> */}
       </AboutStyle>
     </>
   );

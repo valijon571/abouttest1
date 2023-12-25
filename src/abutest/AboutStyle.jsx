@@ -1,7 +1,5 @@
 import styled from "styled-components";
 export const AboutStyle = styled.div`
-  /* & body { */
-  background: #f5f5f5;
   /*  header =================================================================*/
   & .container {
     margin-left: 106px;
@@ -94,6 +92,7 @@ export const AboutStyle = styled.div`
         display: flex;
         justify-content: space-between;
         align-items: center;
+        margin-bottom: 25px;
         & h2 {
           margin-top: 0;
           margin-bottom: 0.5rem;
@@ -120,12 +119,22 @@ export const AboutStyle = styled.div`
       & .card {
         border-radius: 12px;
         border: none;
+        border-radius: 24px;
+        border: 1px solid rgb(202, 211, 223);
+        background: rgb(255, 255, 255);
+        margin-left: 15px;
+        width: 100%;
         & .comp-image {
           height: 250px;
           border-radius: 12px;
           & img {
             width: 330px;
             height: 250px;
+            border-top-left-radius: 24px;
+            border-top-right-radius: 24px;
+            border: 1px solid rgb(202, 211, 223);
+            background: rgb(255, 255, 255);
+            width: 100%;
           }
         }
         & .comp-text {
@@ -184,47 +193,19 @@ export const AboutStyle = styled.div`
       }
     }
     /* Banner =================================================================*/
-    & .banner {
-      & h2 {
-        text-align: center;
-        font-size: calc(1.325rem + 0.9vw);
-        margin-top: 0;
-        margin-bottom: 0.5rem;
-        font-weight: 500;
-        line-height: 1.2;
-        color: var(--bs-heading-color);
-      }
-      & .swiper {
-        width: 100%;
-        height: 100%;
-        margin-left: auto;
-        margin-right: auto;
-        position: relative;
-        overflow: hidden;
-        list-style: none;
-        padding: 0;
-        z-index: 1;
-        display: block;
+    & h5 {
+      color: #02324a;
+      text-align: center;
+      font-family: Geologica-Light, sans-serif;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      @media (max-width: 570px) {
+        font-size: 25px;
       }
     }
-    /* & .carusel {
-      display: inline-block;
-      position: relative;
-      border-radius: 24px;
-      margin-left: 15px;
-      z-index: 1;
-      width: calc(100% - 30px) !important;
-      & div {
-        & img {
-          position: relative;
-          width: 99%;
-          height: 420px;
-          object-fit: cover;
-          border-radius: 24px;
-          z-index: 1;
-        }
-      }
-    }
+
     .swiper {
       width: 100%;
       height: 100%;
@@ -247,10 +228,35 @@ export const AboutStyle = styled.div`
       object-fit: cover;
     }
 
-    & .accordion__button {
-      display: flex;
-      align-items: center;
+    .swiper {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* & .banner {
+      & h2 {
+        text-align: center;
+        font-size: calc(1.325rem + 0.9vw);
+        margin-top: 0;
+        margin-bottom: 0.5rem;
+        font-weight: 500;
+        line-height: 1.2;
+        color: var(--bs-heading-color);
+      }
+      & .swiper {
+        width: 100%;
+        height: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        overflow: hidden;
+        list-style: none;
+        padding: 0;
+        z-index: 1;
+        display: block;
+      }
     } */
+
     /* Cards=========================================================== */
     & .cardd {
       & h5 {
@@ -563,5 +569,4 @@ export const AboutStyle = styled.div`
       }
     }
   }
-  /* } */
 `;
