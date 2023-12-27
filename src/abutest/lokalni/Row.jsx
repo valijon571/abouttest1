@@ -5,7 +5,7 @@ const Row = () => {
   return (
     <>
       <AboutStyle>
-        <div className="container">
+        {/* <div className="container"> */}
           <h4 className="brand">Hamkorlarimiz</h4>
 
           <section class="slide-option">
@@ -233,7 +233,7 @@ const Row = () => {
               </div>
             </div>
           </section>
-        </div>
+        {/* </div> */}
       </AboutStyle>
     </>
   );

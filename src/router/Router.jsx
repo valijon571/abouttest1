@@ -8,6 +8,8 @@ import Row from "../abutest/lokalni/Row";
 import Faq from "../abutest/lokalni/Faq";
 import Footer from "../abutest/lokalni/Footer";
 import About from "../abutest/About";
+import Kirish from "../abutest/glabalni/Kirish";
+import Royhat from "../abutest/glabalni/Royhat";
 
 const Router = () => {
   return (
@@ -22,6 +24,8 @@ const Router = () => {
         <Route path="/row" element={<Row />} />
         <Route path="/faq" element={<Faq />} />
         <Route path="/footer" element={<Footer />} />
+        <Route path="/kirsh" element={<Kirish />} />
+        <Route path="/royhat" element={<Royhat />} />
       </Routes>
     </>
   );

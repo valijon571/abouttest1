@@ -10,14 +10,15 @@ import Footer from "./lokalni/Footer";
 const About = () => {
   return (
     <>
-    <Header />
-    <Main />
-    <Test />
-    <Banner />
-    <Cards />
-    <Row />
-    <Faq />
-    <Footer />
+    
+      <Header />
+      <Main />
+      <Test />
+      <Banner />
+      <Cards />
+      <Row />
+      <Faq />
+      <Footer />
     </>
   );
 };
