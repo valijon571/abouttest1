@@ -34,6 +34,9 @@ export const AboutStyle = styled.div`
         @media (max-width: 430px) {
           margin-left: 2px;
           margin-right: 2px;
+          display: flex;
+          justify-content: space-between;
+          align-items: baseline;
         }
         & .logo {
           font-size: 30px;
@@ -183,6 +186,9 @@ export const AboutStyle = styled.div`
         background: rgb(255, 255, 255);
         margin-left: 15px;
         width: 100%;
+        @media (max-width: 400px) {
+          width: 90%;
+        }
         & .comp-image {
           height: 250px;
           border-radius: 12px;
@@ -342,6 +348,9 @@ export const AboutStyle = styled.div`
             width: calc(50% - 31px);
             @media (max-width: 980px) {
               width: 88%;
+              @media (max-width: 400px) {
+                padding: 36px 7px;
+              }
             }
             & img {
               width: 36px;

@@ -10,6 +10,7 @@ import Footer from "../abutest/lokalni/Footer";
 import About from "../abutest/About";
 import Kirish from "../abutest/glabalni/Kirish";
 import Royhat from "../abutest/glabalni/Royhat";
+import Royhat1 from "../abutest/glabalni/Royhat1";
 
 const Router = () => {
   return (
@@ -26,6 +27,8 @@ const Router = () => {
         <Route path="/footer" element={<Footer />} />
         <Route path="/kirsh" element={<Kirish />} />
         <Route path="/royhat" element={<Royhat />} />
+        <Route path="/royhato" element={<Royhat1 />} />
+
       </Routes>
     </>
   );
