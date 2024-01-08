@@ -13,7 +13,7 @@ const Test = () => {
                 class="d-flex_align-items-center mb-0"
                 href="/all-compititions"
               >
-                <span> Barcha olimpiadalar</span>{" "}
+                <span className="span"> Barcha olimpiadalar</span>{" "}
                 <svg
                   stroke="currentColor"
                   fill="currentColor"

@@ -6,6 +6,18 @@ export const AboutStyle = styled.div`
   & .container {
     margin-left: 106px;
     margin-right: 106px;
+    @media (max-width: 600px) {
+      margin-left: 60px;
+      margin-right: 60px;
+      @media (max-width: 450px) {
+        margin-left: 20px;
+        margin-right: 20px;
+        @media (max-width: 400px) {
+          margin-left: 0px;
+          margin-right: 0px;
+        }
+      }
+    }
     & .sc-bdfCDU_gaNVMT {
       left: 0px;
       position: fixed;
@@ -19,12 +31,22 @@ export const AboutStyle = styled.div`
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @media (max-width: 430px) {
+          margin-left: 2px;
+          margin-right: 2px;
+        }
         & .logo {
           font-size: 30px;
           align-items: center;
           font-weight: 600;
           cursor: pointer;
           text-decoration: none;
+          @media (max-width: 550px) {
+            font-size: 25px;
+            @media (max-width: 400px) {
+              font-size: 20px;
+            }
+          }
         }
         & ul {
           display: flex;
@@ -47,6 +69,11 @@ export const AboutStyle = styled.div`
         display: flex;
         align-items: center;
         justify-content: space-between;
+        @media (max-width: 960px) {
+          display: flex;
+          flex-direction: column;
+          padding-top: 90px;
+        }
         & .main-container-text {
           width: 50%;
           & h1 {
@@ -55,12 +82,28 @@ export const AboutStyle = styled.div`
             margin-bottom: 0.5rem;
             font-weight: 500;
             line-height: 1.2;
+            @media (max-width: 940px) {
+              font-size: 50px;
+              @media (max-width: 840px) {
+                font-size: 40px;
+                @media (max-width: 740px) {
+                  font-size: 30px;
+
+                  @media (max-width: 640px) {
+                    font-size: 20px;
+                  }
+                }
+              }
+            }
           }
           & .abu {
             color: rgb(70, 111, 255);
           }
           & p {
             font-size: 20px;
+            @media (max-width: 940px) {
+              font-size: 18px;
+            }
           }
           & a {
             text-decoration: none;
@@ -85,6 +128,12 @@ export const AboutStyle = styled.div`
             }
           }
         }
+        & .main-container-img {
+          & img {
+            width: 96%;
+            padding-top: 40px;
+          }
+        }
       }
     }
     /* test ====================================================================*/
@@ -95,6 +144,10 @@ export const AboutStyle = styled.div`
         justify-content: space-between;
         align-items: center;
         margin-bottom: 25px;
+        @media (max-width: 550px) {
+          display: flex;
+          flex-direction: column;
+        }
         & h2 {
           margin-top: 0;
           margin-bottom: 0.5rem;
@@ -110,6 +163,10 @@ export const AboutStyle = styled.div`
             background-color: transparent;
             color: inherit;
             text-decoration: none;
+            letter-spacing: 2px;
+            font-size: 18px;
+            padding-right: 15px;
+            color: black;
           }
         }
       }
@@ -194,70 +251,66 @@ export const AboutStyle = styled.div`
         }
       }
     }
-    /* Banner =================================================================*/
-    & h5 {
-      color: #02324a;
-      text-align: center;
-      font-family: Geologica-Light, sans-serif;
-      font-size: 32px;
-      font-style: normal;
-      font-weight: 700;
-      line-height: normal;
-      @media (max-width: 570px) {
-        font-size: 25px;
+  }
+  /* Banner =================================================================*/
+  & h5 {
+    color: #02324a;
+    text-align: center;
+    font-family: Geologica-Light, sans-serif;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    @media (max-width: 570px) {
+      font-size: 25px;
+    }
+  }
+
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 24px;
+    height: auto;
+  }
+
+  .swiper-slide img {
+    display: block;
+    border-radius: 24px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .swiper {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  & .container {
+    margin-left: 106px;
+    margin-right: 106px;
+    @media (max-width: 600px) {
+      margin-left: 60px;
+      margin-right: 60px;
+      @media (max-width: 450px) {
+        margin-left: 20px;
+        margin-right: 20px;
+        @media (max-width: 400px) {
+          margin-left: 0px;
+          margin-right: 0px;
+        }
       }
     }
-
-    .swiper {
-      width: 100%;
-      height: 100%;
-    }
-
-    .swiper-slide {
-      text-align: center;
-      font-size: 18px;
-      background: #fff;
-
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .swiper-slide img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .swiper {
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    /* & .banner {
-      & h2 {
-        text-align: center;
-        font-size: calc(1.325rem + 0.9vw);
-        margin-top: 0;
-        margin-bottom: 0.5rem;
-        font-weight: 500;
-        line-height: 1.2;
-        color: var(--bs-heading-color);
-      }
-      & .swiper {
-        width: 100%;
-        height: 100%;
-        margin-left: auto;
-        margin-right: auto;
-        position: relative;
-        overflow: hidden;
-        list-style: none;
-        padding: 0;
-        z-index: 1;
-        display: block;
-      }
-    } */
 
     /* Cards=========================================================== */
     & .cardd {
@@ -534,11 +587,29 @@ export const AboutStyle = styled.div`
       height: 100%;
       margin: 0 auto;
       max-width: 1210px;
+      @media (max-width: 900px) {
+        padding-left: 0px;
+        padding-right: 0px;
+        @media (max-width: 600px) {
+          display: flex;
+          flex-direction: column;
+          @media (max-width: 400px) {
+            padding-left: 0px;
+            padding-right: 0px;
+            margin: 0px;
+          }
+        }
+      }
       & .img {
         & .d-flex_flex-wrap {
           text-decoration: none;
           display: flex;
           padding: 0px;
+          @media (max-width: 400px) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          }
           & .list-unstyled {
             padding-top: 0.5rem !important;
             padding-bottom: 0.5rem !important;
@@ -571,6 +642,20 @@ export const AboutStyle = styled.div`
       padding-right: 40px;
       margin: 0 auto;
       max-width: 1210px;
+      @media (max-width: 900px) {
+        padding-left: 0px;
+        padding-right: 0px;
+        @media (max-width: 600px) {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          @media (max-width: 400px) {
+            padding-left: 0px;
+            padding-right: 0px;
+            margin: 0px;
+          }
+        }
+      }
       & p {
         color: #cad3df;
         font-family: Geologica-Light, sans-serif;
