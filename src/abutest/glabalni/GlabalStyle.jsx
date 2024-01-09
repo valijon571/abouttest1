@@ -128,6 +128,7 @@ export const GlabalStyle = styled.div`
           width: 100%;
           & .input {
             margin-bottom: 20px;
+            position: relative;
             & .label1 {
               display: inline-block;
               margin-bottom: 5px;
@@ -143,6 +144,18 @@ export const GlabalStyle = styled.div`
               padding-left: 18px;
               width: 96%;
               transition: all 400ms ease 0s;
+            }
+            & .showPassword {
+              border-radius: 9px;
+              cursor: pointer;
+              display: flex;
+              height: 58px;
+              justify-content: center;
+              position: absolute;
+              right: 2px;
+              top: 18px;
+              width: 69px;
+              align-items: center;
             }
           }
           & .submit {

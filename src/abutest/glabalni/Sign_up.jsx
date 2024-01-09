@@ -1,8 +1,8 @@
 import React from "react";
-import { GlabalStyle } from "../glabalni/GlabalStyle";
+import { GlabalStyle } from "./GlabalStyle";
 import Header from "../lokalni/Header";
 
-const Royhat = () => {
+const Sign_up = () => {
   return (
     <>
       <Header />
@@ -18,7 +18,9 @@ const Royhat = () => {
               <h1>Ro'yxatdan o'tish</h1>
               <form className="form1">
                 <div class="input">
-                  <label className="label1" for="">Telefon raqam</label>
+                  <label className="label1" for="">
+                    Telefon raqam
+                  </label>
                   <input
                     placeholder="Telefon raqamingiz:"
                     name="phone"
@@ -37,4 +39,4 @@ const Royhat = () => {
     </>
   );
 };
-export default Royhat;
+export default Sign_up;

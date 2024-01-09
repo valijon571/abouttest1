@@ -14,11 +14,11 @@ const Header = () => {
               </Link>
               <ul>
                 <li>
-                  <Link to="/kirsh">Kirish</Link>
+                  <Link to="/exordial">Kirish</Link>
                 </li>
                 <span>/</span>
                 <li>
-                  <Link to="/royhat">Ro'yxatdan o'tish</Link>
+                  <Link to="/sign_up">Ro'yxatdan o'tish</Link>
                 </li>
               </ul>
             </div>

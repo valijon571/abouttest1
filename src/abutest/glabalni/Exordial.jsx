@@ -3,10 +3,10 @@ import InputMask from "react-input-mask";
 import { useState } from "react";
 import { AiOutlineEye } from "react-icons/ai";
 import { BsEyeSlash } from "react-icons/bs";
-import { GlabalStyle } from "../glabalni/GlabalStyle";
+import { GlabalStyle } from "./GlabalStyle";
 import Header from "../lokalni/Header";
 
-const Kirish = () => {
+const Exordial = () => {
   const [showPassword, setShowPassword] = useState(false);
 
   return (
@@ -79,4 +79,4 @@ const Kirish = () => {
     </>
   );
 };
-export default Kirish;
+export default Exordial;

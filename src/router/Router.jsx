@@ -8,11 +8,11 @@ import Row from "../abutest/lokalni/Row";
 import Faq from "../abutest/lokalni/Faq";
 import Footer from "../abutest/lokalni/Footer";
 import About from "../abutest/About";
-import Kirish from "../abutest/glabalni/Kirish";
-import Royhat from "../abutest/glabalni/Royhat";
-import Royhat1 from "../abutest/glabalni/Royhat1";
-import Royhat2 from "../abutest/glabalni/Royhat2";
-import Royhat3 from "../abutest/glabalni/Royhat3";
+import Sign_up from "../abutest/glabalni/Sign_up";
+import Sign_up_on from "../abutest/glabalni/Sign_up_on";
+import Sign_up_to from "../abutest/glabalni/Sign_up_to";
+import Sign_up_thre from "../abutest/glabalni/Sign_up_thre";
+import Exordial from "../abutest/glabalni/Exordial";
 
 const Router = () => {
   return (
@@ -27,12 +27,11 @@ const Router = () => {
         <Route path="/row" element={<Row />} />
         <Route path="/faq" element={<Faq />} />
         <Route path="/footer" element={<Footer />} />
-        <Route path="/kirsh" element={<Kirish />} />
-        <Route path="/royhat" element={<Royhat />} />
-        <Route path="/royhato" element={<Royhat1 />} />
-        <Route path="/royhaton" element={<Royhat2 />} />
-        <Route path="/royhatto" element={<Royhat3 />} />
-
+        <Route path="/exordial" element={<Exordial />} />
+        <Route path="/sign_up" element={<Sign_up />} />
+        <Route path="/sign_up1" element={<Sign_up_on />} />
+        <Route path="/sign_up2" element={<Sign_up_to />} />
+        <Route path="/sign_up3" element={<Sign_up_thre />} />
       </Routes>
     </>
   );

@@ -17,7 +17,7 @@ const Main = () => {
                   possimus perspiciatis quaerat exercitationem nemo esse nulla
                   voluptate sunt optio blanditiis?
                 </p>
-                <Link to="/kirsh">
+                <Link to="/exordial">
                   <button class="btn_btn-success">
                     <span>Test yechish </span>
                     <svg

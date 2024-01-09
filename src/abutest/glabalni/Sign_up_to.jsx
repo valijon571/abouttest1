@@ -1,8 +1,13 @@
 import React from "react";
-import { GlabalStyle } from "../glabalni/GlabalStyle";
+import { useState } from "react";
+import { AiOutlineEye } from "react-icons/ai";
+import { BsEyeSlash } from "react-icons/bs";
+import { GlabalStyle } from "./GlabalStyle";
 import Header from "../lokalni/Header";
 
-const Royhat2 = () => {
+const Sign_up_to = () => {
+  const [showPassword, setShowPassword] = useState(false);
+
   return (
     <>
       <Header />
@@ -27,6 +32,17 @@ const Royhat2 = () => {
                       class="w-100_input-mask"
                       value=""
                     />
+                    <div className="showPassword">
+                      {showPassword ? (
+                        <div onClick={() => setShowPassword(false)}>
+                          <BsEyeSlash />
+                        </div>
+                      ) : (
+                        <div onClick={() => setShowPassword(true)}>
+                          <AiOutlineEye onClick={() => setShowPassword(true)} />
+                        </div>
+                      )}
+                    </div>
                     {/* <span class="react-reveal">Parol kiriting</span> */}
                     <div>
                       {/* <svg
@@ -73,4 +89,4 @@ const Royhat2 = () => {
     </>
   );
 };
-export default Royhat2;
+export default Sign_up_to;

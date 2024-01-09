@@ -1,8 +1,8 @@
 import React from "react";
-import { GlabalStyle } from "../glabalni/GlabalStyle";
+import { GlabalStyle } from "./GlabalStyle";
 import Header from "../lokalni/Header";
 
-const Royhat1 = () => {
+const Sign_up_on = () => {
   return (
     <>
       <Header />
@@ -196,4 +196,4 @@ const Royhat1 = () => {
     </>
   );
 };
-export default Royhat1;
+export default Sign_up_on;

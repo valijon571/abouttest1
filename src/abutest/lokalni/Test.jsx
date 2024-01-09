@@ -12,7 +12,7 @@ const Test = () => {
               <h2 class="text-center_mb-0">Olimpiadalar</h2>
               <Link
                 class="d-flex_align-items-center mb-0"
-                to="/kirsh"
+                to="/exordial"
               >
                 <span className="span"> Barcha olimpiadalar</span>{" "}
                 <svg
@@ -69,7 +69,7 @@ const Test = () => {
                         </div>
                       </div>
                       <div class="d-flex_justify ">
-                        <Link class="btn" to="/kirsh">
+                        <Link class="btn" to="/exordial">
                           <button className="button ">
                             Testga yozilish
                             <svg
@@ -131,7 +131,7 @@ const Test = () => {
                         </div>
                       </div>
                       <div class="d-flex_justify ">
-                        <Link class="btn" to="/kirsh">
+                        <Link class="btn" to="/exordial">
                           <button className="button ">
                             Testga yozilish
                             <svg
@@ -193,7 +193,7 @@ const Test = () => {
                         </div>
                       </div>
                       <div class="d-flex_justify ">
-                        <Link class="btn"to="/kirsh">
+                        <Link class="btn"to="/exordial">
                           <button className="button ">
                             Testga yozilish
                             <svg
@@ -255,7 +255,7 @@ const Test = () => {
                         </div>
                       </div>
                       <div class="d-flex_justify ">
-                        <Link class="btn" to="/kirsh">
+                        <Link class="btn" to="/exordial">
                           <button className="button ">
                             Testga yozilish
                             <svg
