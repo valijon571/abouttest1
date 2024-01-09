@@ -1,4 +1,6 @@
 import React from "react";
+import InputMask from "react-input-mask";
+import { Link } from "react-router-dom";
 import { GlabalStyle } from "./GlabalStyle";
 import Header from "../lokalni/Header";
 
@@ -21,15 +23,23 @@ const Sign_up = () => {
                   <label className="label1" for="">
                     Telefon raqam
                   </label>
-                  <input
+                  <InputMask
+                    mask="+998 (nn) nnn-nn-nn"
                     placeholder="Telefon raqamingiz:"
                     name="phone"
                     class="w-100_input-mask"
-                    value=""
+                    formatChars={{
+                      n: "[0-9]",
+                      a: "[A-Za-z]",
+                      "*": "[A-Za-z0-9]",
+                    }}
+                    // value=""
                   />
                 </div>
                 <button type="button" class="submit">
+                  <Link to="sign_up1">
                   Davom ettirish
+                  </Link>
                 </button>
               </form>
             </div>

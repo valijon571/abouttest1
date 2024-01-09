@@ -29,7 +29,7 @@ const Router = () => {
         <Route path="/footer" element={<Footer />} />
         <Route path="/exordial" element={<Exordial />} />
         <Route path="/sign_up" element={<Sign_up />} />
-        <Route path="/sign_up1" element={<Sign_up_on />} />
+        <Route path="/sign_up/sign_up1" element={<Sign_up_on />} />
         <Route path="/sign_up2" element={<Sign_up_to />} />
         <Route path="/sign_up3" element={<Sign_up_thre />} />
       </Routes>
