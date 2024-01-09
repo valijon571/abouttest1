@@ -11,6 +11,8 @@ import About from "../abutest/About";
 import Kirish from "../abutest/glabalni/Kirish";
 import Royhat from "../abutest/glabalni/Royhat";
 import Royhat1 from "../abutest/glabalni/Royhat1";
+import Royhat2 from "../abutest/glabalni/Royhat2";
+import Royhat3 from "../abutest/glabalni/Royhat3";
 
 const Router = () => {
   return (
@@ -28,6 +30,8 @@ const Router = () => {
         <Route path="/kirsh" element={<Kirish />} />
         <Route path="/royhat" element={<Royhat />} />
         <Route path="/royhato" element={<Royhat1 />} />
+        <Route path="/royhaton" element={<Royhat2 />} />
+        <Route path="/royhatto" element={<Royhat3 />} />
 
       </Routes>
     </>

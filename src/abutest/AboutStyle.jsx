@@ -59,6 +59,9 @@ export const AboutStyle = styled.div`
             list-style-type: none;
             margin: 10px;
             color: black;
+            & a {
+              text-decoration: none;
+            }
           }
         }
       }
@@ -157,6 +160,8 @@ export const AboutStyle = styled.div`
           font-weight: 500;
           line-height: 1.2;
           color: var(--bs-heading-color);
+          margin-top: 0px;
+          padding-top: 15px;
         }
         & a {
           text-decoration: none;
@@ -200,6 +205,7 @@ export const AboutStyle = styled.div`
             border: 1px solid rgb(202, 211, 223);
             background: rgb(255, 255, 255);
             width: 100%;
+            object-fit: cover;
           }
         }
         & .comp-text {
@@ -267,6 +273,8 @@ export const AboutStyle = styled.div`
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+    margin-top: 0px;
+    padding-top: 50px;
     @media (max-width: 570px) {
       font-size: 25px;
     }
@@ -328,6 +336,8 @@ export const AboutStyle = styled.div`
         font-style: normal;
         font-weight: 700;
         line-height: normal;
+        margin-top: 0px;
+        padding-top: 60px;
         @media (max-width: 570px) {
           font-size: 25px;
         }
@@ -394,9 +404,10 @@ export const AboutStyle = styled.div`
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      margin-bottom: 40px;
       align-items: center;
-      padding-bottom: 25px;
+      /* padding-bottom: 25px; */
+      margin-bottom: 0px;
+      padding-bottom: 40px;
       & .accordion_on {
         width: 58%;
         @media (max-width: 760px) {
@@ -427,6 +438,8 @@ export const AboutStyle = styled.div`
               font-style: normal;
               font-weight: 600;
               line-height: normal;
+              /* margin-top: 0px;
+              padding-top: 40px; */
               @media (max-width: 900px) {
                 width: calc(100% - 150px);
               }
@@ -460,6 +473,8 @@ export const AboutStyle = styled.div`
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+    margin-top: 0px;
+    padding-top: 40px;
   }
   section.slide-option {
     margin-left: 0px;

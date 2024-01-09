@@ -1,5 +1,6 @@
 import React from "react";
 import { AboutStyle } from "../AboutStyle";
+import { Link } from "react-router-dom";
 
 const Main = () => {
   return (
@@ -16,7 +17,7 @@ const Main = () => {
                   possimus perspiciatis quaerat exercitationem nemo esse nulla
                   voluptate sunt optio blanditiis?
                 </p>
-                <a href="/all-compititions">
+                <Link to="/kirsh">
                   <button class="btn_btn-success">
                     <span>Test yechish </span>
                     <svg
@@ -39,7 +40,7 @@ const Main = () => {
                       ></path>
                     </svg>
                   </button>
-                </a>
+                </Link>
               </div>
               <div class="main-container-img">
                 <img

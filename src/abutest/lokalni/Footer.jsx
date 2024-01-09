@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { AboutStyle } from "../AboutStyle";
 
 const Footer = () => {
@@ -9,9 +10,9 @@ const Footer = () => {
             <div className="img">
               <ul class="d-flex_flex-wrap">
                 <li class="list-unstyled">
-                  <a class="text-white" href="/">
+                  <Link class="text-white" to="/">
                     Bosh sahifa
-                  </a>
+                  </Link>
                 </li>
                 <li class="list-unstyled">
                   <a class="text-white" href="/">

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { AboutStyle } from "../AboutStyle";
 const Header = () => {
   return (
@@ -8,16 +9,16 @@ const Header = () => {
           <div class="sc-bdfCDU_gaNVMT">
             {/* <div class="header"> */}
             <div class="header_items">
-              <a class="logo" href="/">
+              <Link class="logo" to="/">
                 abutest
-              </a>
+              </Link>
               <ul>
                 <li>
-                  <a href="/login">Kirish</a>
+                  <Link to="/kirsh">Kirish</Link>
                 </li>
                 <span>/</span>
                 <li>
-                  <a href="/sign-up">Ro'yxatdan o'tish</a>
+                  <Link to="/royhat">Ro'yxatdan o'tish</Link>
                 </li>
               </ul>
             </div>

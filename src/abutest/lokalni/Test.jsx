@@ -1,5 +1,6 @@
 import React from "react";
 import { AboutStyle } from "../AboutStyle";
+import { Link } from "react-router-dom";
 
 const Test = () => {
   return (
@@ -9,9 +10,9 @@ const Test = () => {
           <div className="competitions">
             <div className="competitions_kjn">
               <h2 class="text-center_mb-0">Olimpiadalar</h2>
-              <a
+              <Link
                 class="d-flex_align-items-center mb-0"
-                href="/all-compititions"
+                to="/kirsh"
               >
                 <span className="span"> Barcha olimpiadalar</span>{" "}
                 <svg
@@ -25,7 +26,7 @@ const Test = () => {
                 >
                   <path d="M295.6 163.7c-5.1 5-5.1 13.3-.1 18.4l60.8 60.9H124.9c-7.1 0-12.9 5.8-12.9 13s5.8 13 12.9 13h231.3l-60.8 60.9c-5 5.1-4.9 13.3.1 18.4 5.1 5 13.2 5 18.3-.1l82.4-83c1.1-1.2 2-2.5 2.7-4.1.7-1.6 1-3.3 1-5 0-3.4-1.3-6.6-3.7-9.1l-82.4-83c-4.9-5.2-13.1-5.3-18.2-.3z"></path>
                 </svg>
-              </a>
+              </Link>
             </div>
             <div className="competitions-items">
               <div class="sc-hKgKIp fLikdv">
@@ -68,7 +69,7 @@ const Test = () => {
                         </div>
                       </div>
                       <div class="d-flex_justify ">
-                        <a class="btn" href="/competiton-list/test">
+                        <Link class="btn" to="/kirsh">
                           <button className="button ">
                             Testga yozilish
                             <svg
@@ -83,7 +84,7 @@ const Test = () => {
                               ></path>
                             </svg>
                           </button>
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   </div>
@@ -130,7 +131,7 @@ const Test = () => {
                         </div>
                       </div>
                       <div class="d-flex_justify ">
-                        <a class="btn" href="/competiton-list/leader-30">
+                        <Link class="btn" to="/kirsh">
                           <button className="button ">
                             Testga yozilish
                             <svg
@@ -145,7 +146,7 @@ const Test = () => {
                               ></path>
                             </svg>
                           </button>
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   </div>
@@ -192,7 +193,7 @@ const Test = () => {
                         </div>
                       </div>
                       <div class="d-flex_justify ">
-                        <a class="btn" href="/competiton-list/bolalar-12">
+                        <Link class="btn"to="/kirsh">
                           <button className="button ">
                             Testga yozilish
                             <svg
@@ -207,7 +208,7 @@ const Test = () => {
                               ></path>
                             </svg>
                           </button>
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   </div>
@@ -254,7 +255,7 @@ const Test = () => {
                         </div>
                       </div>
                       <div class="d-flex_justify ">
-                        <a class="btn" href="/competiton-list/ulugbek-kdjrs">
+                        <Link class="btn" to="/kirsh">
                           <button className="button ">
                             Testga yozilish
                             <svg
@@ -269,7 +270,7 @@ const Test = () => {
                               ></path>
                             </svg>
                           </button>
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   </div>
