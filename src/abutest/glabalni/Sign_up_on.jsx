@@ -230,6 +230,7 @@ const Sign_up_on = () => {
                   </button>
                 </form>
               </div>
+              
             </div>
           </div>
         </div>
