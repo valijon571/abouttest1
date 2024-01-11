@@ -10,16 +10,16 @@ const Main = () => {
           <div class="main-container">
             <div class="main_container">
               <div class="main-container-text">
-                <h1>Test Olimpiada </h1>
-                <h1 className="abu"> AbuTest</h1>
+                <h1>Sinov-</h1>
+                <h1 className="abu">To'siq emas</h1>
                 <p>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam
-                  possimus perspiciatis quaerat exercitationem nemo esse nulla
-                  voluptate sunt optio blanditiis?
+                  Bilimingizni mustahkamlash va uni muntazam sinovdan o'tkazib
+                  turish uchun jamoamiz bilan muqobil yechim yopishga harakat
+                  qildik
                 </p>
                 <Link to="/exordial">
                   <button class="btn_btn-success">
-                    <span>Test yechish </span>
+                    <span>Boshlash</span>
                     <svg
                       width="34"
                       height="34"

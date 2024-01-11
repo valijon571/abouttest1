@@ -26,6 +26,7 @@ export const AboutStyle = styled.div`
       z-index: 1000;
       background-color: white;
       & .header_items {
+        padding: 20px 0px;
         margin-left: 106px;
         margin-right: 106px;
         display: flex;
@@ -38,6 +39,7 @@ export const AboutStyle = styled.div`
           justify-content: space-between;
           align-items: baseline;
         }
+
         & .logo {
           font-size: 30px;
           align-items: center;
@@ -49,6 +51,17 @@ export const AboutStyle = styled.div`
             @media (max-width: 400px) {
               font-size: 20px;
             }
+          }
+          & img {
+            width: 150px;
+            @media (max-width: 550px) {
+              width: 130px;
+
+            @media (max-width: 400px) {
+              width: 100px;
+
+            }
+          }
           }
         }
         & ul {

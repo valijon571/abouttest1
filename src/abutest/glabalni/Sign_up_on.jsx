@@ -1,8 +1,49 @@
 import React from "react";
 import { GlabalStyle } from "./GlabalStyle";
 import Header from "../lokalni/Header";
+import axios from "axios";
+import { useEffect, useState } from "react";
 
 const Sign_up_on = () => {
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [errors, setErrors] = useState({
+    avatar: false,
+    first_name: false,
+    last_name: false,
+    middle_name: false,
+    birthday: false,
+    // middle_name: false,
+    // address: false,
+  });
+  const [obj, setObj] = useState({
+    phone: "",
+    password: "",
+    first_name: "",
+    last_name: "",
+    gender: "",
+    birthday: "",
+    middle_name: "",
+    address: "",
+  });
+  useEffect(() => {
+    getData();
+  }, []);
+  const getData = () => {
+    setLoading(true);
+    axios
+      .get(
+        "https://btest.gazon-tashkent.uz/api/v1/utils/regions/?lan=ru&parent=1&lan=uz"
+      )
+      .then((r) => {
+        setData(r.data);
+      })
+      .catch((e) => {})
+      .finally(() => {
+        setLoading(false);
+      });
+  };
+
   return (
     <>
       <Header />

@@ -170,6 +170,10 @@ export const GlabalStyle = styled.div`
             font-size: 15px;
             font-weight: 600;
             height: 52px;
+            & a {
+              text-decoration: none;
+              color: white;
+            }
           }
         }
       }
