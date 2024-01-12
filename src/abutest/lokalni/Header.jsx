@@ -10,6 +10,7 @@ const Header = () => {
             {/* <div class="header"> */}
             <div class="header_items">
               <Link class="logo" to="/">
+              {/* abutest uz */}
               <img src="https://abutest.uz/img/abutest_logo.png" alt="" />
               </Link>
               <ul>

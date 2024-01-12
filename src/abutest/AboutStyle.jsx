@@ -45,6 +45,7 @@ export const AboutStyle = styled.div`
           align-items: center;
           font-weight: 600;
           cursor: pointer;
+          color: black;
           text-decoration: none;
           @media (max-width: 550px) {
             font-size: 25px;
@@ -57,11 +58,10 @@ export const AboutStyle = styled.div`
             @media (max-width: 550px) {
               width: 130px;
 
-            @media (max-width: 400px) {
-              width: 100px;
-
+              @media (max-width: 400px) {
+                width: 100px;
+              }
             }
-          }
           }
         }
         & ul {
@@ -74,6 +74,7 @@ export const AboutStyle = styled.div`
             color: black;
             & a {
               text-decoration: none;
+              color: black;
             }
           }
         }
@@ -83,6 +84,7 @@ export const AboutStyle = styled.div`
 
     & .main-container {
       /* background: rgb(247, 251, 254); */
+      padding-top: 40px;
       & .main_container {
         padding-top: 40px;
         display: flex;
