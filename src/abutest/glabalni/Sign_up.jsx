@@ -1,6 +1,7 @@
 import React from "react";
 import InputMask from "react-input-mask";
 import { Link } from "react-router-dom";
+import axios from "axios";
 import { GlabalStyle } from "./GlabalStyle";
 import Header from "../lokalni/Header";
 import { AiOutlineEye } from "react-icons/ai";
@@ -10,6 +11,19 @@ import { BsEyeSlash } from "react-icons/bs";
 const Sign_up = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [step, setStep] = useState(1);
+  const [loading, setLoading] = useState(false);
+  const [errors, setErrors] = useState({
+    phone: false,
+    avatar: false,
+    first_name: false,
+    last_name: false,
+    middle_name: false,
+    birthday: false,
+    gender: false,
+    region: false,
+    password: false,
+    code: false,
+  });
   const [formData, setFormData] = useState({
     phone: "",
     avatar: null,
@@ -22,14 +36,100 @@ const Sign_up = () => {
     password: "",
     code: "",
   });
-  // const handleInputChange = (e) => {
-  //   const { name, value } = e.target;
-  //   setFormData({ ...formData, [name]: value });
-  // };
-  // const handleFileChange = (e) => {
-  //   const { name, files } = e.target;
-  //   setFormData({ ...formData, [name]: files[0] });
-  // };
+  const [obj, setObj] = useState({
+    phone: "",
+    avatar: null,
+    first_name: "",
+    last_name: "",
+    middle_name: "",
+    birthday: "",
+    gender: "",
+    region: "",
+    password: "",
+    code: "",
+  });
+
+  const submitReg = (e) => {
+    e.preventDefault();
+
+    let tt = true;
+    let err = {};
+
+    switch (currentStep) {
+      case 1:
+        if (!obj?.phone) {
+          tt = false;
+          err["phone"] = true;
+        }
+        break;
+      case 2:
+        if (!obj?.password) {
+          tt = false;
+          err["password"] = true;
+        }
+        if (!obj?.first_name) {
+          tt = false;
+          err["first_name"] = true;
+        }
+        if (!obj?.last_name) {
+          tt = false;
+          err["last_name"] = true;
+        }
+        if (!obj?.middle_name) {
+          tt = false;
+          err["middle_name"] = true;
+        }
+        if (!obj?.gender) {
+          tt = false;
+          err["gender"] = true;
+        }
+        if (!obj?.address) {
+          tt = false;
+          err["address"] = true;
+        }
+        if (!obj?.birthday) {
+          tt = false;
+          err["birthday"] = true;
+        }
+        break;
+      default:
+        break;
+    }
+
+    if (tt) {
+      if (currentStep === 1) {
+        setCurrentStep(2);
+      } else {
+        setLoading(true);
+        axios
+          .post("https://btest.gazon-tashkent.uz/api/v1/account/register/", obj)
+          .then(() => {
+            setRegistrationSuccess(true);
+          })
+          .catch((error) => {
+            console.error("Error data:", error);
+          })
+          .finally(() => {
+            setLoading(false);
+          });
+      }
+    } else {
+      setErrors(err);
+    }
+  };
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+  const handleFileChange = (e) => {
+    const { name, files } = e.target;
+    setFormData({ ...formData, [name]: files[0] });
+    // setErrors((prevErrors) => ({
+    //   ...prevErrors,
+    //   [name]: "",
+    // }));
+  };
   const handleNextStep = () => {
     setStep(step + 1);
   };
@@ -264,7 +364,11 @@ const Sign_up = () => {
                         </div>
                       </div>
                     </div>
-                    <button type="button" class="submit" onClick={handleNextStep}>
+                    <button
+                      type="button"
+                      class="submit"
+                      onClick={handleNextStep}
+                    >
                       Davom ettirish
                     </button>
                   </form>
@@ -275,39 +379,41 @@ const Sign_up = () => {
         )}
         {/* ==========================3=================================== */}
         {step === 3 && (
-        <div class="sc-gKsecS_cwgBGk">
-          <div class="registr">
-            <div class="registr-items_inputs">
-              <div class="d-flex_justify-content-beetwen">
-                <div></div>
-                <div>3/4</div>
-              </div>
-              <h1>Ro'yxatdan o'tish</h1>
-              <form className="form1">
-                <div class="input">
-                  <label for="">Parol</label>
-                  <div class="password">
-                    <input
-                      type="password"
-                      placeholder="Parol kiriting:"
-                      name="password"
-                      class="w-100_input-mask"
-                      value=""
-                    />
-                    <div className="showPassword">
-                      {showPassword ? (
-                        <div onClick={() => setShowPassword(false)}>
-                          <BsEyeSlash />
-                        </div>
-                      ) : (
-                        <div onClick={() => setShowPassword(true)}>
-                          <AiOutlineEye onClick={() => setShowPassword(true)} />
-                        </div>
-                      )}
-                    </div>
-                    {/* <span class="react-reveal">Parol kiriting</span> */}
-                    <div>
-                      {/* <svg
+          <div class="sc-gKsecS_cwgBGk">
+            <div class="registr">
+              <div class="registr-items_inputs">
+                <div class="d-flex_justify-content-beetwen">
+                  <div></div>
+                  <div>3/4</div>
+                </div>
+                <h1>Ro'yxatdan o'tish</h1>
+                <form className="form1">
+                  <div class="input">
+                    <label for="">Parol</label>
+                    <div class="password">
+                      <input
+                        type="password"
+                        placeholder="Parol kiriting:"
+                        name="password"
+                        class="w-100_input-mask"
+                        value=""
+                      />
+                      <div className="showPassword">
+                        {showPassword ? (
+                          <div onClick={() => setShowPassword(false)}>
+                            <BsEyeSlash />
+                          </div>
+                        ) : (
+                          <div onClick={() => setShowPassword(true)}>
+                            <AiOutlineEye
+                              onClick={() => setShowPassword(true)}
+                            />
+                          </div>
+                        )}
+                      </div>
+                      {/* <span class="react-reveal">Parol kiriting</span> */}
+                      <div>
+                        {/* <svg
                         fill="none"
                         height="24"
                         viewBox="0 0 24 24"
@@ -322,7 +428,7 @@ const Sign_up = () => {
                           ></path>
                         </g>
                       </svg> */}
-                      {/* <svg
+                        {/* <svg
                         fill="none"
                         height="24"
                         viewBox="0 0 24 24"
@@ -337,58 +443,58 @@ const Sign_up = () => {
                           ></path>
                         </g>
                       </svg> */}
+                      </div>
                     </div>
                   </div>
-                </div>
-                <button type="submit" class="submit" onClick={handleNextStep}>
-                  Ro'yxatdan o'tish
-                </button>
-              </form>
+                  <button type="submit" class="submit" onClick={handleNextStep}>
+                    Ro'yxatdan o'tish
+                  </button>
+                </form>
+              </div>
             </div>
           </div>
-        </div>
- )}
+        )}
         {/* =========================4==================================== */}
         {step === 4 && (
-        <div class="sc-gKsecS_cwgBGk">
-          <div class="registr">
-            <div class="registr-items_inputs">
-              <div class="css-p5dvk7">
-                <div
-                //   aria-valuemax="100"
-                //   aria-valuemin="0"
-                //   aria-valuenow="66"
-                //   role="progressbar"
-                //   class="css-1nsw7s9"
-                //   style="width: 66%;"
-                ></div>
-              </div>
-              <div class="d-flex_justify-content-beetwen">
-                <div></div>
-                <div>4/4</div>
-              </div>
-              <h1>Ro'yxatdan o'tish</h1>
-              <form className="form1">
-                <div class="input-items">
-                  <div class="input">
-                    <label for="">Kodni kiriting</label>
-                    <input
-                      type="number"
-                      class="w-100_input-mask"
-                      placeholder="code:"
-                      name="code"
-                      value=""
-                    />
-                  </div>
+          <div class="sc-gKsecS_cwgBGk">
+            <div class="registr">
+              <div class="registr-items_inputs">
+                <div class="css-p5dvk7">
+                  <div
+                  //   aria-valuemax="100"
+                  //   aria-valuemin="0"
+                  //   aria-valuenow="66"
+                  //   role="progressbar"
+                  //   class="css-1nsw7s9"
+                  //   style="width: 66%;"
+                  ></div>
                 </div>
-                <button type="submit" class="submit" onClick={handleSubmit}>
-                  Jo'natish
-                </button>
-              </form>
+                <div class="d-flex_justify-content-beetwen">
+                  <div></div>
+                  <div>4/4</div>
+                </div>
+                <h1>Ro'yxatdan o'tish</h1>
+                <form className="form1">
+                  <div class="input-items">
+                    <div class="input">
+                      <label for="">Kodni kiriting</label>
+                      <input
+                        type="number"
+                        class="w-100_input-mask"
+                        placeholder="code:"
+                        name="code"
+                        value=""
+                      />
+                    </div>
+                  </div>
+                  <button type="submit" class="submit" onClick={handleSubmit}>
+                    Jo'natish
+                  </button>
+                </form>
+              </div>
             </div>
           </div>
-        </div>
-         )}
+        )}
       </GlabalStyle>
     </>
   );
