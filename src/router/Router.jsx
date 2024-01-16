@@ -9,10 +9,9 @@ import Faq from "../abutest/lokalni/Faq";
 import Footer from "../abutest/lokalni/Footer";
 import About from "../abutest/About";
 import Sign_up from "../abutest/glabalni/Sign_up";
-// import Sign_up_on from "../abutest/glabalni/Sign_up_on";
-// import Sign_up_to from "../abutest/glabalni/Sign_up_to";
-// import Sign_up_thre from "../abutest/glabalni/Sign_up_thre";
 import Exordial from "../abutest/glabalni/Exordial";
+import Objectives from "../abutest/lokalni/Objectives";
+import Contacts_us from "../abutest/lokalni/Contacts_us";
 
 const Router = () => {
   return (
@@ -29,9 +28,8 @@ const Router = () => {
         <Route path="/footer" element={<Footer />} />
         <Route path="/exordial" element={<Exordial />} />
         <Route path="/sign_up" element={<Sign_up />} />
-        {/* <Route path="/sign_up/sign_up1" element={<Sign_up_on />} /> */}
-        {/* <Route path="/sign_up2" element={<Sign_up_to />} /> */}
-        {/* <Route path="/sign_up3" element={<Sign_up_thre />} /> */}
+        <Route path="/objectives" element={<Objectives />} />
+        <Route path="/contacts" element={<Contacts_us />} />
       </Routes>
     </>
   );

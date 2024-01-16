@@ -7,6 +7,8 @@ import Row from "./lokalni/Row";
 import Faq from "./lokalni/Faq";
 import Test from "./lokalni/Test";
 import Footer from "./lokalni/Footer";
+import Objectives from "./lokalni/Objectives";
+import Contacts_us from "./lokalni/Contacts_us";
 const About = () => {
   return (
     <>
@@ -18,6 +20,8 @@ const About = () => {
       <Cards />
       <Row />
       <Faq />
+      <Objectives />
+      <Contacts_us />
       <Footer />
     </>
   );
