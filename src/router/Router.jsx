@@ -12,6 +12,7 @@ import Sign_up from "../abutest/glabalni/Sign_up";
 import Exordial from "../abutest/glabalni/Exordial";
 import Objectives from "../abutest/lokalni/Objectives";
 import Contacts_us from "../abutest/lokalni/Contacts_us";
+import Profile from "../abutest/glabalni/Exordial/Profile";
 
 const Router = () => {
   return (
@@ -30,6 +31,7 @@ const Router = () => {
         <Route path="/sign_up" element={<Sign_up />} />
         <Route path="/objectives" element={<Objectives />} />
         <Route path="/contacts" element={<Contacts_us />} />
+        <Route path="/profile" element={<Profile />} />
       </Routes>
     </>
   );
