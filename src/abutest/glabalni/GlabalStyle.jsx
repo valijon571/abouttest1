@@ -403,6 +403,7 @@ export const GlabalStyle = styled.div`
                   padding-left: 18px;
                   transition: all 400ms ease 0s;
                   width: 100%;
+                  
                 }
               }
               & .mb-3_col-md-6_col-12 {
