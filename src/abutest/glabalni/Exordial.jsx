@@ -33,7 +33,6 @@ const Exordial = () => {
                           "*": "[A-Za-z0-9]",
                         }}
                         class="w-100_input-mask"
-                        // value=""
                       />
                     </div>
                     <div class="input">
@@ -49,8 +48,7 @@ const Exordial = () => {
                           placeholder="Parol kiriting:"
                           name="password"
                           class="w-100"
-                          // value=""
-                        />{" "}
+                        />
                         <div className="showPassword">
                           {showPassword ? (
                             <div onClick={() => setShowPassword(false)}>

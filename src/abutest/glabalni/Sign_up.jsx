@@ -208,9 +208,7 @@ const Sign_up = () => {
                             for=""
                             class="avatar-input2"
                             data-active="active"
-                          >
-                            {" "}
-                          </label>
+                          ></label>
                           <input
                             name="avatar"
                             title=""

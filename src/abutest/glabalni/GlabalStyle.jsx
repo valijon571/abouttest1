@@ -364,7 +364,6 @@ export const GlabalStyle = styled.div`
                     border-radius: 8px;
                     border: none;
                     color: white;
-                    /* font-size: 15px; */
                     font-weight: 600;
                     height: 41px;
                   }
@@ -419,7 +418,6 @@ export const GlabalStyle = styled.div`
                 & .form-control {
                   background-color: #e9ecef;
                   opacity: 1;
-                  /* background-color: var(--light); */
                   border-radius: 8px;
                   border: 1px solid rgb(226, 228, 234);
                   font-size: 15px;
